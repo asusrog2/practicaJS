@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Bienvenido a mi Calculadora</h1>
+        <script language="JavaScript">
+            let num1=0;
+            let num2=0;
+            let num3=0;
+            let opc;
+            let mas=0;
+            let result=0;
+            let result2=0;
+  
+            let calcufor;     
+            let a;
+            let b;
+            let c;
+            calcufor=prompt("1.-formula cuadratica\n\
+2.-calculadora\n\
+3.-salir");
+    while(calcufor<3){
+        if(calcufor==1){
+    a=prompt("inserte el valor de a","");   
+    b=prompt("inserte el valor de b",""); 
+    c=prompt("inserte el valor de c","");
+    window.alert("el resultado de X en la formula es="+formulax(a,b,c));
+    window.alert("el resultado de X1 en la formula es="+formulax1(a,b,c));
+                    calcufor=prompt("1.-formula cuadratica\n\
+2.-calculadora\n\
+3.-salir");
+           
+        }
+    if(calcufor==2){
+    opc=prompt("Elije que operacion deseas realizar y pon el simbolo. \n\
+    1.-Suma=+  \n\
+    2.-RESTA=- \n\
+    3.-MULTIPLICACION=*\n\
+    4.-DIVISION= / \n\
+     para Salir ponga 5 \n\
+     \n\
+   Que operacion desea realizar?","");
+    while(opc!=5){
+           if(opc==="+"){
+            num1=prompt("inserte el primer numero a sumar","");
+            num2=prompt("inserte el segundo numero a sumar","");
+            window.alert("el resultado de la suma es: "+sumar(num1,num2));
+            result=sumar(num1,num2);
+            mas=prompt("desea sumar otro numero? 1=si / 2=no","");
+            while(mas==1){
+            num3=prompt("inserte el numero a sumar","");
+            window.alert("el resultado de la suma es: "+sumar(result,num3));
+            result2=sumar(result,num3);
+            result=result2;
+            mas=prompt("desea sumar otro numero? 1=si / 2=no","");
+            };
+            if(result>0){
+            window.alert("el resultado de sus operaciones es="+result);
+             num1=0;
+             num2=0;
+             num3=0;
+             opc="s";
+             mas=0;
+             result=0;
+             result2=0;
+            }
+           }
+           if(opc==="-"){
+            num1=prompt("inserte el primer numero para restar","");
+            num2=prompt("inserte el segundo para restar","");
+            window.alert("el resultado de la restar es: "+restar(num1,num2));
+            result=restar(num1,num2);
+            mas=prompt("desea restar entre otro numero? 1=si / 2=no","");
+            while(mas==1){
+            num3=prompt("inserte el numero a restar","");
+            window.alert("el resultado de la restar es: "+restar(result,num3));
+            result2=restar(result,num3);
+            result=result2;
+            mas=prompt("desea restar otro numero? 1=si / 2=no","");
+            }
+            if(result>0){
+            window.alert("el resultado de sus operaciones es="+result);
+            }
+            window.alert("el resultado de sus operaciones es="+result);
+             num1=0;
+             num2=0;
+             num3=0;
+             opc="s";
+             mas=0;
+             result=0;
+             result2=0;
+           }
+           if(opc==="*"){
+            num1=prompt("inserte el primer numero a multiplicar","");
+            num2=prompt("inserte el segundo numero a multiplicar","");
+            window.alert("el resultado de la multiplicacion es: "+multi(num1,num2));
+            result=multi(num1,num2);
+            mas=prompt("desea multiplicar por otro numero? 1=si / 2=no","");
+            while(mas==1){
+            num3=prompt("inserte el numero a multiplicar","");
+            window.alert("el resultado de la multipliacion es: "+multi(result,num3));
+            result2=multi(result,num3);
+            result=result2;
+            mas=prompt("desea multiplicar por otro numero? 1=si / 2=no","");
+            };
+            if(result>0){
+            window.alert("el resultado de sus operaciones es="+result);
+             num1=0;
+             num2=0;
+             num3=0;
+             opc="s";
+             mas=0;
+             result=0;
+             result2=0;
+            }
+           }
+           if(opc==="/"){
+            num1=prompt("inserte el primer numero a dividir","");
+            num2=prompt("inserte el segundo numero para dividir","");
+            window.alert("el resultado de la division es: "+divi(num1,num2));
+            result=divi(num1,num2);
+            mas=prompt("desea dividir por otro numero? 1=si / 2=no","");
+            while(mas==1){
+            num3=prompt("inserte el numero a dividir","");
+            window.alert("el resultado de la divicion es: "+divi(result,num3));
+            result2=divi(result,num3);
+            result=result2;
+            mas=prompt("desea dividir por otro numero? 1=si / 2=no","");
+            };
+            if(result>0){
+            window.alert("el resultado de sus operaciones es="+result);
+             num1=0;
+             num2=0;
+             num3=0;
+             opc="s";
+             mas=0;
+             result=0;
+             result2=0;
+            }
+           }
+    opc=prompt("Elije que operacion deseas realizar y pon el simbolo. \n\
+    1.-Suma=+  \n\
+    2.-RESTA=- \n\
+    3.-MULTIPLICACION=*\n\
+    4.-DIVISION= / \n\
+     para Salir ponga 5 \n\
+     \n\
+   Que operacion desea realizar?","");
+       }
+       window.alert("Gracias por usar esta calculadora simple:D");
+               calcufor=prompt("1.-formula cuadratica\n\
+2.-calculadora\n\
+3.-salir");
+            
+        }
+   
+    } 
+       
+
+       
+       
+       
+       
+            function sumar(a,b){
+                let total=parseFloat (a) + parseFloat(b);
+                return total;
+            }
+            function restar(a,b){
+                 let total=parseFloat (a) - parseFloat(b);
+                return total;
+            }
+            function multi(a,b){
+                let total=parseFloat (a) * parseFloat(b);
+                return total;
+            }
+            function divi(a,b){
+                let total=parseFloat (a) / parseFloat(b);
+                return total;
+            }
+            function formulax(a,b,c){
+                parseFloat (a);
+                parseFloat (b);
+                parseFloat (c);
+                let x= (-b+((b^2-4*a*c)^(1/2)))/(2*a);
+                return x
+            }
+            function formulax1(a,b,c){
+                parseFloat (a);
+                parseFloat (b);
+                parseFloat (c);
+                let x1=(-b-((b^2-4*a*c)^(1/2)))/(2*a)
+                return x1
+            }
+        </script>
+    </body>
+</html>
